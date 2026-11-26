@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "quota-meter",
+  "type": "registry:ui",
+  "title": "Quota meter",
+  "description": "Show how much of an allowance is spoken for, with a segmented track and the original units beside it.",
+  "categories": [
+    "data display"
+  ],
+  "dependencies": [
+    "@ui-sdk/react@0.1.0-beta.13",
+    "@ui-sdk/core@0.1.0-beta.13"
+  ],
+  "files": [
+    {
+      "path": "components/ui/quota-meter.tsx",
+      "type": "registry:ui",
+      "content": "/*\nMIT License\n\nCopyright (c) 2026 Sarthak Mishra\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n*/\n'use client';\nimport {\n  Meter,\n  MeterIndicator,\n  MeterLabel,\n  MeterTrack,\n} from '@ui-sdk/react/meter';\nimport './quota-meter.css';\n\n/** How much of an allowance is used, in a segmented track with its units. */\nexport function QuotaMeter({\n  label,\n  used,\n  capacity,\n  unit,\n}: {\n  label: string;\n  used: number;\n  capacity: number;\n  /** The units `used` and `capacity` are in, like \"GB\" or \"seats\". */\n  unit: string;\n}) {\n  const max = Math.max(capacity, 0);\n  const percent = max > 0 ? Math.min(100, Math.max(0, (100 * used) / max)) : 0;\n  return (\n    <Meter\n      className=\"riff-quota-meter\"\n      value={used}\n      min={0}\n      max={max}\n      getValueLabel={() => `${used} of ${capacity} ${unit}`}\n      data-full={percent >= 90 ? '' : undefined}\n    >\n      <div className=\"riff-quota-head\">\n        <MeterLabel>{label}</MeterLabel>\n        <b aria-hidden=\"true\">{Math.round(percent)}%</b>\n      </div>\n      <MeterTrack className=\"riff-quota-track\">\n        <MeterIndicator className=\"riff-quota-fill\" />\n      </MeterTrack>\n      <small aria-hidden=\"true\">\n        {used} of {capacity} {unit} used\n      </small>\n    </Meter>\n  );\n}\n"
+    },
+    {
+      "path": "components/ui/quota-meter.css",
+      "type": "registry:ui",
+      "content": "/* Host roles first, system colours after: the component reads your theme\n   when it has these properties and stays legible when it does not. */\n@layer components {\n  .riff-quota-meter {\n    display: grid;\n    gap: 0.625rem;\n    color: var(--color-foreground, CanvasText);\n  }\n  .riff-quota-head {\n    display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    gap: 1rem;\n    font-size: 0.875rem;\n    font-weight: 500;\n  }\n  .riff-quota-head b {\n    font-size: 1.5rem;\n    line-height: 1.2;\n    font-weight: 600;\n    font-variant-numeric: tabular-nums;\n  }\n  .riff-quota-meter small {\n    color: var(--color-muted-foreground, GrayText);\n    font-size: 0.8125rem;\n    font-variant-numeric: tabular-nums;\n  }\n  /* Twenty segments, each 5% of the allowance. */\n  .riff-quota-track {\n    height: 1.25rem;\n    border-radius: 0.25rem;\n    background: color-mix(in srgb, currentColor 12%, transparent);\n    mask-image: repeating-linear-gradient(\n      90deg,\n      black 0 calc(5% - 2px),\n      transparent calc(5% - 2px) 5%\n    );\n  }\n  .riff-quota-fill {\n    height: 100%;\n    background: var(--color-primary, currentColor);\n    transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1);\n  }\n  /* Nearly full: the fill takes the host's warning colour. */\n  .riff-quota-meter[data-full] .riff-quota-fill {\n    background: var(--color-warning, var(--color-primary, currentColor));\n  }\n  @media (forced-colors: active) {\n    .riff-quota-fill {\n      background: Highlight;\n      forced-color-adjust: none;\n    }\n  }\n  @media (prefers-reduced-motion: reduce) {\n    .riff-quota-fill {\n      transition: none;\n    }\n  }\n}\n"
+    },
+    {
+      "path": "LICENSE",
+      "type": "registry:file",
+      "target": "licenses/riff-ui.txt",
+      "content": "MIT License\n\nCopyright (c) 2026 Sarthak Mishra\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    }
+  ]
+}

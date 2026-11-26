@@ -1,0 +1,67 @@
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-text-field {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-foreground, CanvasText);
+  }
+  /* A fixed line, so a block can line a button up with the input. */
+  .riff-text-field-label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+  .riff-text-field-control {
+    min-width: 0;
+    min-height: 2.25rem;
+    border: 1px solid var(--color-input, GrayText);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    background: var(--color-background, Canvas);
+    color: inherit;
+    font: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    transition:
+      border-color 150ms ease,
+      box-shadow 150ms ease;
+  }
+  .riff-text-field-control::placeholder {
+    color: var(--color-muted-foreground, GrayText);
+  }
+  .riff-text-field-control:focus-visible {
+    border-color: var(--color-ring, Highlight);
+    outline: none;
+    box-shadow: 0 0 0 3px
+      color-mix(in srgb, var(--color-ring, Highlight) 25%, transparent);
+  }
+  .riff-text-field-control[data-invalid] {
+    border-color: var(--color-destructive, LinkText);
+  }
+  .riff-text-field-control[data-disabled] {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .riff-text-field-description,
+  .riff-text-field-error {
+    margin: 0;
+    font-size: 0.8125rem;
+  }
+  .riff-text-field-description {
+    color: var(--color-muted-foreground, GrayText);
+  }
+  .riff-text-field-error {
+    color: var(--color-destructive, LinkText);
+  }
+  @media (forced-colors: active) {
+    .riff-text-field-control:focus-visible {
+      outline: 2px solid Highlight;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .riff-text-field-control {
+      transition: none;
+    }
+  }
+}

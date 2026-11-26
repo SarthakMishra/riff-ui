@@ -1,0 +1,86 @@
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-button {
+    display: inline-flex;
+    min-height: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.875rem;
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      opacity 150ms ease,
+      scale 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .riff-button[data-size='sm'] {
+    min-height: 2rem;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.8125rem;
+  }
+  .riff-button[data-variant='solid'] {
+    background: var(--color-primary, ButtonText);
+    color: var(--color-primary-foreground, ButtonFace);
+  }
+  .riff-button[data-variant='outline'] {
+    border-color: var(--color-border, GrayText);
+    background: var(--color-background, Canvas);
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-button[data-variant='ghost'] {
+    background: transparent;
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-button:active:not([data-disabled], [data-pending], [aria-busy='true']) {
+    scale: 0.97;
+  }
+  .riff-button:focus-visible {
+    outline: 2px solid var(--color-ring, Highlight);
+    outline-offset: 2px;
+  }
+  /* Disabled and waiting look the same: dimmed, with the press ignored. */
+  .riff-button:is([data-disabled], [data-pending], [aria-busy='true']) {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .riff-button:is([data-pending], [aria-busy='true']) {
+    cursor: progress;
+  }
+  @media (hover: hover) {
+    .riff-button[data-variant='solid']:hover:not([data-disabled]) {
+      background: color-mix(
+        in srgb,
+        var(--color-primary, ButtonText) 88%,
+        var(--color-background, Canvas)
+      );
+    }
+    .riff-button:is([data-variant='outline'], [data-variant='ghost']):hover:not(
+        [data-disabled]
+      ) {
+      background: var(
+        --color-fill-hover,
+        color-mix(in srgb, currentColor 6%, transparent)
+      );
+    }
+  }
+  @media (forced-colors: active) {
+    .riff-button {
+      border-color: ButtonText;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .riff-button {
+      transition: none;
+    }
+  }
+}

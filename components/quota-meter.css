@@ -1,0 +1,59 @@
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-quota-meter {
+    display: grid;
+    gap: 0.625rem;
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-quota-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .riff-quota-head b {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .riff-quota-meter small {
+    color: var(--color-muted-foreground, GrayText);
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+  }
+  /* Twenty segments, each 5% of the allowance. */
+  .riff-quota-track {
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    background: color-mix(in srgb, currentColor 12%, transparent);
+    mask-image: repeating-linear-gradient(
+      90deg,
+      black 0 calc(5% - 2px),
+      transparent calc(5% - 2px) 5%
+    );
+  }
+  .riff-quota-fill {
+    height: 100%;
+    background: var(--color-primary, currentColor);
+    transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  /* Nearly full: the fill takes the host's warning colour. */
+  .riff-quota-meter[data-full] .riff-quota-fill {
+    background: var(--color-warning, var(--color-primary, currentColor));
+  }
+  @media (forced-colors: active) {
+    .riff-quota-fill {
+      background: Highlight;
+      forced-color-adjust: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .riff-quota-fill {
+      transition: none;
+    }
+  }
+}

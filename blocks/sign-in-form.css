@@ -1,0 +1,52 @@
+/* Host roles first, system colours after: the block reads your theme when
+   it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-sign-in {
+    display: grid;
+    gap: 1.25rem;
+    border: 1px solid var(--color-border, GrayText);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background: var(--color-card, Canvas);
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-sign-in-head {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .riff-sign-in-head h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .riff-sign-in-head p,
+  .riff-sign-in-foot {
+    margin: 0;
+    color: var(--color-muted-foreground, GrayText);
+    font-size: 0.875rem;
+  }
+  /* The reset link sits on the label's line, at its end. */
+  .riff-sign-in-password {
+    position: relative;
+  }
+  .riff-sign-in-password > a {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    font-size: 0.8125rem;
+  }
+  .riff-sign-in a {
+    color: inherit;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    text-underline-offset: 0.2em;
+  }
+  .riff-sign-in a:focus-visible {
+    border-radius: 0.125rem;
+    outline: 2px solid var(--color-ring, Highlight);
+    outline-offset: 2px;
+  }
+  .riff-sign-in-foot {
+    text-align: center;
+  }
+}

@@ -1,0 +1,89 @@
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-receipt {
+    border: 1px solid var(--color-border, GrayText);
+    border-radius: 0.625rem;
+    background: var(--color-card, Canvas);
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-receipt-summary {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.75rem;
+    border: 0;
+    border-radius: inherit;
+    padding: 0.875rem 1rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+  }
+  .riff-receipt-summary strong {
+    margin-inline-start: auto;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .riff-receipt-summary:focus-visible {
+    outline: 2px solid var(--color-ring, Highlight);
+    outline-offset: 2px;
+  }
+  .riff-receipt-chevron {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--color-muted-foreground, GrayText);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: rotate 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .riff-receipt-summary[data-open] .riff-receipt-chevron {
+    rotate: 180deg;
+  }
+  /* The panel animates its measured height (UI SDK sets the property). */
+  .riff-receipt-panel {
+    height: var(--collapsible-panel-height);
+    overflow: hidden;
+    transition: height 220ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .riff-receipt-lines {
+    margin-inline: 1rem;
+    border-top: 1px dashed var(--color-border, GrayText);
+    padding-block: 0.75rem 0.875rem;
+    font-size: 0.875rem;
+  }
+  .riff-receipt-lines dl {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.375rem 1rem;
+    margin: 0;
+  }
+  .riff-receipt-lines dt {
+    color: var(--color-muted-foreground, GrayText);
+  }
+  .riff-receipt-lines dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+  }
+  @media (hover: hover) {
+    .riff-receipt-summary:hover {
+      background: var(
+        --color-fill-hover,
+        color-mix(in srgb, currentColor 6%, transparent)
+      );
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .riff-receipt-summary,
+    .riff-receipt-panel,
+    .riff-receipt-chevron {
+      transition: none;
+    }
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "riff",
+  "homepage": "https://sarthakmishra.com/riff-ui",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Run an action and stay pending until it finishes, whether it is a click handler or the form it submits.",
+      "categories": [
+        "actions"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/button.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "copy-field",
+      "type": "registry:ui",
+      "title": "Copy field",
+      "description": "Copy a read-only value in one press, or select it by hand when clipboard access is unavailable.",
+      "categories": [
+        "actions"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/copy-field.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/copy-field.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text field",
+      "description": "A labelled line of text with a hint and a validation message that appears beside it after the first submit.",
+      "categories": [
+        "inputs"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/text-field.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/text-field.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "password-reveal",
+      "type": "registry:ui",
+      "title": "Password reveal",
+      "description": "Check what you typed without losing the caret, with a Caps Lock warning and a field that hides itself on submit.",
+      "categories": [
+        "inputs"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/password-reveal.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/password-reveal.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "allocation-slider",
+      "type": "registry:ui",
+      "title": "Allocation slider",
+      "description": "Divide a fixed budget between two buckets. Moving one share gives the remainder to the other.",
+      "categories": [
+        "inputs"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/allocation-slider.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/allocation-slider.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "quota-meter",
+      "type": "registry:ui",
+      "title": "Quota meter",
+      "description": "Show how much of an allowance is spoken for, with a segmented track and the original units beside it.",
+      "categories": [
+        "data display"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/quota-meter.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/quota-meter.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "receipt-details",
+      "type": "registry:ui",
+      "title": "Receipt details",
+      "description": "Keep an order's total in view, and open the receipt to check the line items, taxes and fees behind it.",
+      "categories": [
+        "data display"
+      ],
+      "dependencies": [
+        "@ui-sdk/react@0.1.0-beta.13",
+        "@ui-sdk/core@0.1.0-beta.13"
+      ],
+      "files": [
+        {
+          "path": "components/ui/receipt-details.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/receipt-details.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-form",
+      "type": "registry:block",
+      "title": "Sign-in form",
+      "description": "A sign-in card with email and password, links to reset or sign up, and a submit button that waits for the action.",
+      "categories": [
+        "authentication"
+      ],
+      "registryDependencies": [
+        "@riff/text-field",
+        "@riff/password-reveal",
+        "@riff/button"
+      ],
+      "files": [
+        {
+          "path": "components/sign-in-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/sign-in-form.css",
+          "type": "registry:component"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "plan-usage",
+      "type": "registry:block",
+      "title": "Plan usage",
+      "description": "A plan's allowances as segmented meters under its name and renewal date, with an upgrade action that waits for checkout to open.",
+      "categories": [
+        "billing"
+      ],
+      "registryDependencies": [
+        "@riff/quota-meter",
+        "@riff/button"
+      ],
+      "files": [
+        {
+          "path": "components/plan-usage.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/plan-usage.css",
+          "type": "registry:component"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "order-summary",
+      "type": "registry:block",
+      "title": "Order summary",
+      "description": "A checkout's last step: the total with its receipt one press away, a promo code field, and a pay button that can't charge twice.",
+      "categories": [
+        "billing"
+      ],
+      "registryDependencies": [
+        "@riff/receipt-details",
+        "@riff/text-field",
+        "@riff/button"
+      ],
+      "files": [
+        {
+          "path": "components/order-summary.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/order-summary.css",
+          "type": "registry:component"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "invite-team",
+      "type": "registry:block",
+      "title": "Invite teammates",
+      "description": "Invite teammates by email or with a link to copy, with the seats left on the plan in view so nobody invites past its limit.",
+      "categories": [
+        "team"
+      ],
+      "registryDependencies": [
+        "@riff/quota-meter",
+        "@riff/text-field",
+        "@riff/button",
+        "@riff/copy-field"
+      ],
+      "files": [
+        {
+          "path": "components/invite-team.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/invite-team.css",
+          "type": "registry:component"
+        },
+        {
+          "path": "LICENSE",
+          "type": "registry:file",
+          "target": "licenses/riff-ui.txt"
+        }
+      ]
+    },
+    {
+      "name": "riff-skill",
+      "type": "registry:item",
+      "title": "Riff agent skill",
+      "description": "Teaches coding agents to install, compose and theme Riff components and blocks, and to check them before calling a screen done.",
+      "files": [
+        {
+          "path": "skills/riff/SKILL.md",
+          "type": "registry:file",
+          "target": ".agents/skills/riff/SKILL.md"
+        },
+        {
+          "path": "skills/riff/SKILL.md",
+          "type": "registry:file",
+          "target": ".claude/skills/riff/SKILL.md"
+        }
+      ]
+    }
+  ]
+}

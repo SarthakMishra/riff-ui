@@ -1,0 +1,36 @@
+/* Host roles first, system colours after: the block reads your theme when
+   it has these properties and stays legible when it does not. */
+@layer components {
+  .riff-plan-usage {
+    border: 1px solid var(--color-border, GrayText);
+    border-radius: 0.75rem;
+    background: var(--color-card, Canvas);
+    color: var(--color-foreground, CanvasText);
+  }
+  .riff-plan-usage-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-border, GrayText);
+    padding: 1rem 1.25rem;
+  }
+  .riff-plan-usage-head h2 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .riff-plan-usage-head p {
+    margin: 0;
+    color: var(--color-muted-foreground, GrayText);
+    font-size: 0.8125rem;
+  }
+  .riff-plan-usage-list {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 1.25rem;
+    list-style: none;
+  }
+}
