@@ -46,10 +46,10 @@ npx shadcn@latest add @riff/riff-skill
 
 ## Without the namespace
 
-You can also pass a full URL, which is handy for a one-off install:
+For a one-off install, install straight from GitHub or pass the item URL:
 
 ```sh
-npx shadcn@latest add https://sarthakmishra.com/riff-ui/r/copy-field.json
+npx shadcn@latest add SarthakMishra/riff-ui/copy-field
 ```
 
 The [registry index](https://sarthakmishra.com/riff-ui/r/registry.json) at `/riff-ui/r/registry.json` lists everything it serves.

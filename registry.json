@@ -208,18 +208,20 @@
         "authentication"
       ],
       "registryDependencies": [
-        "@riff/text-field",
-        "@riff/password-reveal",
-        "@riff/button"
+        "SarthakMishra/riff-ui/text-field",
+        "SarthakMishra/riff-ui/password-reveal",
+        "SarthakMishra/riff-ui/button"
       ],
       "files": [
         {
-          "path": "components/sign-in-form.tsx",
-          "type": "registry:component"
+          "path": "blocks/sign-in-form.tsx",
+          "type": "registry:component",
+          "target": "@components/sign-in-form.tsx"
         },
         {
-          "path": "components/sign-in-form.css",
-          "type": "registry:component"
+          "path": "blocks/sign-in-form.css",
+          "type": "registry:component",
+          "target": "@components/sign-in-form.css"
         },
         {
           "path": "LICENSE",
@@ -237,17 +239,19 @@
         "billing"
       ],
       "registryDependencies": [
-        "@riff/quota-meter",
-        "@riff/button"
+        "SarthakMishra/riff-ui/quota-meter",
+        "SarthakMishra/riff-ui/button"
       ],
       "files": [
         {
-          "path": "components/plan-usage.tsx",
-          "type": "registry:component"
+          "path": "blocks/plan-usage.tsx",
+          "type": "registry:component",
+          "target": "@components/plan-usage.tsx"
         },
         {
-          "path": "components/plan-usage.css",
-          "type": "registry:component"
+          "path": "blocks/plan-usage.css",
+          "type": "registry:component",
+          "target": "@components/plan-usage.css"
         },
         {
           "path": "LICENSE",
@@ -265,18 +269,20 @@
         "billing"
       ],
       "registryDependencies": [
-        "@riff/receipt-details",
-        "@riff/text-field",
-        "@riff/button"
+        "SarthakMishra/riff-ui/receipt-details",
+        "SarthakMishra/riff-ui/text-field",
+        "SarthakMishra/riff-ui/button"
       ],
       "files": [
         {
-          "path": "components/order-summary.tsx",
-          "type": "registry:component"
+          "path": "blocks/order-summary.tsx",
+          "type": "registry:component",
+          "target": "@components/order-summary.tsx"
         },
         {
-          "path": "components/order-summary.css",
-          "type": "registry:component"
+          "path": "blocks/order-summary.css",
+          "type": "registry:component",
+          "target": "@components/order-summary.css"
         },
         {
           "path": "LICENSE",
@@ -294,19 +300,21 @@
         "team"
       ],
       "registryDependencies": [
-        "@riff/quota-meter",
-        "@riff/text-field",
-        "@riff/button",
-        "@riff/copy-field"
+        "SarthakMishra/riff-ui/quota-meter",
+        "SarthakMishra/riff-ui/text-field",
+        "SarthakMishra/riff-ui/button",
+        "SarthakMishra/riff-ui/copy-field"
       ],
       "files": [
         {
-          "path": "components/invite-team.tsx",
-          "type": "registry:component"
+          "path": "blocks/invite-team.tsx",
+          "type": "registry:component",
+          "target": "@components/invite-team.tsx"
         },
         {
-          "path": "components/invite-team.css",
-          "type": "registry:component"
+          "path": "blocks/invite-team.css",
+          "type": "registry:component",
+          "target": "@components/invite-team.css"
         },
         {
           "path": "LICENSE",
