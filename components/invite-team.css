@@ -1,34 +1,39 @@
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
-  .riff-order-summary {
+  .riff-invite-team {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
     border: 1px solid var(--color-border, GrayText);
     border-radius: 0.75rem;
     padding: 1.25rem;
     background: var(--color-card, Canvas);
     color: var(--color-foreground, CanvasText);
   }
-  .riff-order-summary h2 {
+  .riff-invite-team-head {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .riff-invite-team-head h2 {
     margin: 0;
     font-size: 1rem;
     line-height: 1.4;
     font-weight: 600;
   }
-  /* Each line's name and amount share a row of the receipt's grid. */
-  .riff-order-summary dl > div {
-    display: contents;
+  .riff-invite-team-head p {
+    margin: 0;
+    color: var(--color-muted-foreground, GrayText);
+    font-size: 0.875rem;
   }
   /* The button lines up with the field's input, under its label. */
-  .riff-order-summary-code {
+  .riff-invite-team-form {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
     gap: 0.5rem;
   }
   /* The label's line and the field's gap (text-field.css). */
-  .riff-order-summary-code > .riff-button {
+  .riff-invite-team-form > .riff-button {
     margin-block-start: 1.75rem;
   }
 }

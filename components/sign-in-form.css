@@ -1,5 +1,5 @@
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
   .riff-sign-in {
     display: grid;

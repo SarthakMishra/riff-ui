@@ -2,7 +2,7 @@
 
 A checkout's last step: the total with its receipt one press away, a promo code field, and a pay button that can't charge twice.
 
-[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/blocks/order-summary)
+[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/components/order-summary)
 
 ```tsx
 <OrderSummary
@@ -27,7 +27,7 @@ Install with the shadcn CLI, or copy the files yourself.
 npx shadcn@latest add @riff/order-summary
 ```
 
-The CLI installs the components the block uses into your UI folder first, then writes `order-summary.tsx` and `order-summary.css` into `components/`.
+The CLI installs the components it uses into your UI folder first, then writes `order-summary.tsx` and `order-summary.css` beside them.
 
 ### Manual
 
@@ -37,11 +37,11 @@ The CLI installs the components the block uses into your UI folder first, then w
 npx shadcn@latest add @riff/receipt-details @riff/text-field @riff/button
 ```
 
-Or copy each one by hand from its page: [Receipt details](../components/receipt-details.md), [Text field](../components/text-field.md), [Button](../components/button.md).
+Or copy each one by hand from its page: [Receipt details](./receipt-details.md), [Text field](./text-field.md), [Button](./button.md).
 
-#### 2. Copy the block
+#### 2. Copy the component
 
-Save this as `components/order-summary.tsx`:
+Save this as `components/ui/order-summary.tsx`:
 
 ```tsx
 /*
@@ -129,8 +129,8 @@ export function OrderSummary({
 Save this beside it as `order-summary.css`:
 
 ```css
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
   .riff-order-summary {
     display: grid;
@@ -168,7 +168,7 @@ Save this beside it as `order-summary.css`:
 ## Usage
 
 ```tsx
-import { OrderSummary } from '@/components/order-summary';
+import { OrderSummary } from '@/components/ui/order-summary';
 
 <OrderSummary
   total={formatMoney(cart.total)}
@@ -182,7 +182,7 @@ Format amounts before you pass them, in the shopper's currency. The promo code i
 
 ## Built from
 
-[Receipt details](../components/receipt-details.md), [Text field](../components/text-field.md), [Button](../components/button.md). A block is a starting point: change its copy, layout and props freely once it is in your project.
+[Receipt details](./receipt-details.md), [Text field](./text-field.md), [Button](./button.md). Change its copy, layout and props freely once it is in your project.
 
 ## API reference
 

@@ -2,7 +2,7 @@
 
 A sign-in card with email and password, links to reset or sign up, and a submit button that waits for the action.
 
-[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/blocks/sign-in-form)
+[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/components/sign-in-form)
 
 ```tsx
 <SignInForm
@@ -22,7 +22,7 @@ Install with the shadcn CLI, or copy the files yourself.
 npx shadcn@latest add @riff/sign-in-form
 ```
 
-The CLI installs the components the block uses into your UI folder first, then writes `sign-in-form.tsx` and `sign-in-form.css` into `components/`.
+The CLI installs the components it uses into your UI folder first, then writes `sign-in-form.tsx` and `sign-in-form.css` beside them.
 
 ### Manual
 
@@ -32,11 +32,11 @@ The CLI installs the components the block uses into your UI folder first, then w
 npx shadcn@latest add @riff/text-field @riff/password-reveal @riff/button
 ```
 
-Or copy each one by hand from its page: [Text field](../components/text-field.md), [Password reveal](../components/password-reveal.md), [Button](../components/button.md).
+Or copy each one by hand from its page: [Text field](./text-field.md), [Password reveal](./password-reveal.md), [Button](./button.md).
 
-#### 2. Copy the block
+#### 2. Copy the component
 
-Save this as `components/sign-in-form.tsx`:
+Save this as `components/ui/sign-in-form.tsx`:
 
 ```tsx
 /*
@@ -116,8 +116,8 @@ export function SignInForm({
 Save this beside it as `sign-in-form.css`:
 
 ```css
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
   .riff-sign-in {
     display: grid;
@@ -173,7 +173,7 @@ Save this beside it as `sign-in-form.css`:
 ## Usage
 
 ```tsx
-import { SignInForm } from '@/components/sign-in-form';
+import { SignInForm } from '@/components/ui/sign-in-form';
 
 export default function SignInPage() {
   return (
@@ -190,7 +190,7 @@ export default function SignInPage() {
 
 ## Built from
 
-[Text field](../components/text-field.md), [Password reveal](../components/password-reveal.md), [Button](../components/button.md). A block is a starting point: change its copy, layout and props freely once it is in your project.
+[Text field](./text-field.md), [Password reveal](./password-reveal.md), [Button](./button.md). Change its copy, layout and props freely once it is in your project.
 
 ## API reference
 

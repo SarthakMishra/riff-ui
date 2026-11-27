@@ -6,7 +6,7 @@
     gap: 0.5rem;
     color: var(--color-foreground, CanvasText);
   }
-  /* A fixed line, so a block can line a button up with the input. */
+  /* A fixed line, so a form row can line a button up with the input. */
   .riff-text-field-label {
     font-size: 0.875rem;
     line-height: 1.25rem;

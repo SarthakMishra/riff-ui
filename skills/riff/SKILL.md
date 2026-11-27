@@ -1,15 +1,15 @@
 ---
 name: riff
-description: Install, compose and theme Riff components (button, copy field, text field, password reveal, allocation slider, quota meter, receipt details) and blocks (sign-in form, plan usage, order summary, invite teammates) from the @riff shadcn registry. Use when a screen needs one of these controls or blocks, when adding or restyling one, or when reviewing UI built with them.
+description: Install, compose and theme Riff components (button, copy field, text field, password reveal, allocation slider, quota meter, receipt details, sign-in form, plan usage, order summary, invite teammates) from the @riff shadcn registry. Use when a screen needs one of these controls, when adding or restyling one, or when reviewing UI built with them.
 ---
 
 # Riff
 
-Riff is a small collection of standalone React components built on UI SDK, and
-blocks composed from them. Each item solves one specific UI job rather than
-trying to cover a whole application, and copies into the project as a `.tsx`
-file and a scoped `.css` file. The project owns both files after installation;
-there is no runtime package to upgrade.
+Riff is a small collection of standalone React components built on UI SDK. Each
+item solves one specific UI job rather than trying to cover a whole application,
+and copies into the project as a `.tsx` file and a scoped `.css` file. The
+project owns both files after installation; there is no runtime package to
+upgrade.
 
 Docs: https://sarthakmishra.com/riff-ui
 Source: https://github.com/SarthakMishra/riff-ui
@@ -18,7 +18,8 @@ Source: https://github.com/SarthakMishra/riff-ui
 
 1. The project needs React 19 and a `components.json` (run
    `npx shadcn@latest init` if it has none).
-2. Register the namespace once in `components.json`:
+2. Install straight from GitHub (`pnpm dlx shadcn@latest add SarthakMishra/riff-ui/quota-meter`),
+   or register the namespace once in `components.json`:
 
    ```json
    {
@@ -30,7 +31,8 @@ Source: https://github.com/SarthakMishra/riff-ui
 
 3. Install with the project's package manager, for example
    `pnpm dlx shadcn@latest add @riff/quota-meter`. The CLI installs
-   `@ui-sdk/react` and `@ui-sdk/core` at the tested versions.
+   `@ui-sdk/react` and `@ui-sdk/core` at the tested versions, along with any
+   sibling Riff components a composed component uses.
 
 ## Choose the component
 
@@ -43,20 +45,15 @@ Source: https://github.com/SarthakMishra/riff-ui
 | Split 100% between two named buckets                 | `allocation-slider` |
 | Show usage against a limit (storage, seats, credits) | `quota-meter`       |
 | Keep a total visible with its line items on demand   | `receipt-details`   |
+| Sign in with email and password                      | `sign-in-form`      |
+| A plan's allowances and an upgrade action            | `plan-usage`        |
+| The last step of a checkout                          | `order-summary`     |
+| Invite teammates by email or link, with seats        | `invite-team`       |
 
-## Start from a block
-
-A block is a whole piece of a screen built from the components. Installing
-one installs the components it uses into `components/ui/` and the block into
-`components/`. Change the block's copy and layout freely; it is a starting
-point, not a dependency.
-
-| Screen                                        | Block           |
-| --------------------------------------------- | --------------- |
-| Sign in with email and password               | `sign-in-form`  |
-| A plan's allowances and an upgrade action     | `plan-usage`    |
-| The last step of a checkout                   | `order-summary` |
-| Invite teammates by email or link, with seats | `invite-team`   |
+Composed components (`sign-in-form`, `plan-usage`, `order-summary`,
+`invite-team`) install alongside the smaller components they use inside your UI
+folder. Change their copy and layout freely; they are starting points, not
+locked abstractions.
 
 If none fits, build the control from UI SDK parts (`@ui-sdk/react/<part>`)
 instead of bending one of these. Read the SDK's own docs in

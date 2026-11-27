@@ -1,8 +1,8 @@
 # Riff
 
-Standalone React components and blocks built on [UI SDK](https://www.npmjs.com/package/@ui-sdk/react).
+Standalone React components built on [UI SDK](https://www.npmjs.com/package/@ui-sdk/react).
 
-Riff is not a full-application design system. Each item solves one specific UI problem properly, with accessible keyboard and screen reader behaviour, forced-colour and reduced-motion support, and small tactile details, and installs as source files you own.
+Riff is not a full-application design system. Each component solves one specific UI problem properly, with accessible keyboard and screen reader behaviour, forced-colour and reduced-motion support, and small tactile details, and installs as source files you own.
 
 [Live demos and interactive docs](https://sarthakmishra.com/riff-ui) · [Quickstart](docs/quickstart.md) · [Installation](docs/installation.md) · [Theming](docs/theming.md) · [Agent skill](docs/agents.md) · [MCP server](docs/agents/mcp.md)
 
@@ -34,22 +34,17 @@ Each component writes a `.tsx` file and a scoped `.css` file (`@layer components
 
 | Component | Category | Description | Source | Live |
 | --- | --- | --- | --- | --- |
-| [Button](docs/components/button.md) | Actions | Run an action and stay pending until it finishes, whether it is a click handler or the form it submits. | [tsx](components/ui/button.tsx) · [css](components/ui/button.css) | [Preview](https://sarthakmishra.com/riff-ui/components/button) |
-| [Copy field](docs/components/copy-field.md) | Actions | Copy a read-only value in one press, or select it by hand when clipboard access is unavailable. | [tsx](components/ui/copy-field.tsx) · [css](components/ui/copy-field.css) | [Preview](https://sarthakmishra.com/riff-ui/components/copy-field) |
-| [Text field](docs/components/text-field.md) | Inputs | A labelled line of text with a hint and a validation message that appears beside it after the first submit. | [tsx](components/ui/text-field.tsx) · [css](components/ui/text-field.css) | [Preview](https://sarthakmishra.com/riff-ui/components/text-field) |
-| [Password reveal](docs/components/password-reveal.md) | Inputs | Check what you typed without losing the caret, with a Caps Lock warning and a field that hides itself on submit. | [tsx](components/ui/password-reveal.tsx) · [css](components/ui/password-reveal.css) | [Preview](https://sarthakmishra.com/riff-ui/components/password-reveal) |
-| [Allocation slider](docs/components/allocation-slider.md) | Inputs | Divide a fixed budget between two buckets. Moving one share gives the remainder to the other. | [tsx](components/ui/allocation-slider.tsx) · [css](components/ui/allocation-slider.css) | [Preview](https://sarthakmishra.com/riff-ui/components/allocation-slider) |
-| [Quota meter](docs/components/quota-meter.md) | Data display | Show how much of an allowance is spoken for, with a segmented track and the original units beside it. | [tsx](components/ui/quota-meter.tsx) · [css](components/ui/quota-meter.css) | [Preview](https://sarthakmishra.com/riff-ui/components/quota-meter) |
-| [Receipt details](docs/components/receipt-details.md) | Data display | Keep an order's total in view, and open the receipt to check the line items, taxes and fees behind it. | [tsx](components/ui/receipt-details.tsx) · [css](components/ui/receipt-details.css) | [Preview](https://sarthakmishra.com/riff-ui/components/receipt-details) |
-
-## Blocks
-
-| Block | Category | Uses | Source | Live |
-| --- | --- | --- | --- | --- |
-| [Sign-in form](docs/blocks/sign-in-form.md) | Authentication | `text-field`, `password-reveal`, `button` | [tsx](blocks/sign-in-form.tsx) · [css](blocks/sign-in-form.css) | [Preview](https://sarthakmishra.com/riff-ui/blocks/sign-in-form) |
-| [Plan usage](docs/blocks/plan-usage.md) | Billing | `quota-meter`, `button` | [tsx](blocks/plan-usage.tsx) · [css](blocks/plan-usage.css) | [Preview](https://sarthakmishra.com/riff-ui/blocks/plan-usage) |
-| [Order summary](docs/blocks/order-summary.md) | Billing | `receipt-details`, `text-field`, `button` | [tsx](blocks/order-summary.tsx) · [css](blocks/order-summary.css) | [Preview](https://sarthakmishra.com/riff-ui/blocks/order-summary) |
-| [Invite teammates](docs/blocks/invite-team.md) | Team | `quota-meter`, `text-field`, `button`, `copy-field` | [tsx](blocks/invite-team.tsx) · [css](blocks/invite-team.css) | [Preview](https://sarthakmishra.com/riff-ui/blocks/invite-team) |
+| [Button](docs/components/button.md) | Actions | Run an action and stay pending until it finishes, whether it is a click handler or the form it submits. | [tsx](components/button.tsx) · [css](components/button.css) | [Preview](https://sarthakmishra.com/riff-ui/components/button) |
+| [Copy field](docs/components/copy-field.md) | Actions | Copy a read-only value in one press, or select it by hand when clipboard access is unavailable. | [tsx](components/copy-field.tsx) · [css](components/copy-field.css) | [Preview](https://sarthakmishra.com/riff-ui/components/copy-field) |
+| [Text field](docs/components/text-field.md) | Inputs | A labelled line of text with a hint and a validation message that appears beside it after the first submit. | [tsx](components/text-field.tsx) · [css](components/text-field.css) | [Preview](https://sarthakmishra.com/riff-ui/components/text-field) |
+| [Password reveal](docs/components/password-reveal.md) | Inputs | Check what you typed without losing the caret, with a Caps Lock warning and a field that hides itself on submit. | [tsx](components/password-reveal.tsx) · [css](components/password-reveal.css) | [Preview](https://sarthakmishra.com/riff-ui/components/password-reveal) |
+| [Allocation slider](docs/components/allocation-slider.md) | Inputs | Divide a fixed budget between two buckets. Moving one share gives the remainder to the other. | [tsx](components/allocation-slider.tsx) · [css](components/allocation-slider.css) | [Preview](https://sarthakmishra.com/riff-ui/components/allocation-slider) |
+| [Quota meter](docs/components/quota-meter.md) | Data display | Show how much of an allowance is spoken for, with a segmented track and the original units beside it. | [tsx](components/quota-meter.tsx) · [css](components/quota-meter.css) | [Preview](https://sarthakmishra.com/riff-ui/components/quota-meter) |
+| [Receipt details](docs/components/receipt-details.md) | Data display | Keep an order's total in view, and open the receipt to check the line items, taxes and fees behind it. | [tsx](components/receipt-details.tsx) · [css](components/receipt-details.css) | [Preview](https://sarthakmishra.com/riff-ui/components/receipt-details) |
+| [Sign-in form](docs/components/sign-in-form.md) | Authentication | A sign-in card with email and password, links to reset or sign up, and a submit button that waits for the action. | [tsx](components/sign-in-form.tsx) · [css](components/sign-in-form.css) | [Preview](https://sarthakmishra.com/riff-ui/components/sign-in-form) |
+| [Plan usage](docs/components/plan-usage.md) | Billing | A plan's allowances as segmented meters under its name and renewal date, with an upgrade action that waits for checkout to open. | [tsx](components/plan-usage.tsx) · [css](components/plan-usage.css) | [Preview](https://sarthakmishra.com/riff-ui/components/plan-usage) |
+| [Order summary](docs/components/order-summary.md) | Billing | A checkout's last step: the total with its receipt one press away, a promo code field, and a pay button that can't charge twice. | [tsx](components/order-summary.tsx) · [css](components/order-summary.css) | [Preview](https://sarthakmishra.com/riff-ui/components/order-summary) |
+| [Invite teammates](docs/components/invite-team.md) | Team | Invite teammates by email or with a link to copy, with the seats left on the plan in view so nobody invites past its limit. | [tsx](components/invite-team.tsx) · [css](components/invite-team.css) | [Preview](https://sarthakmishra.com/riff-ui/components/invite-team) |
 
 ## Agent skill
 

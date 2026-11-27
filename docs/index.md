@@ -1,6 +1,6 @@
 # Introduction
 
-Riff is a collection of standalone React components and blocks built on UI SDK: focused, accessible source you copy into your project, with an agent skill.
+Riff is a collection of standalone React components built on UI SDK: focused, accessible source files you copy into your project, plus an agent skill.
 
 [Live preview and interactive docs](https://sarthakmishra.com/riff-ui)
 
@@ -8,7 +8,7 @@ Riff is an ongoing collection of standalone React components I build whenever an
 
 Every component is built on [UI SDK](https://www.npmjs.com/package/@ui-sdk/react), which supplies tested keyboard, focus and screen reader behaviour. Riff adds the layout, the states and the tactile details on top: a thumb that settles when you let go, a total that stays in view, a copy button that tells you when the clipboard refused.
 
-Components sit in the sidebar by what they do: actions, inputs and data display. Blocks compose a few of them into a focused piece of a screen, like a sign-in form or a plan's usage card, that you install in one command and then make your own.
+Components sit in the sidebar by what they do: actions, inputs, data display, authentication, billing and team. Multi-part ones like a sign-in form or a plan's usage card compose the smaller controls and install them alongside in one command so you can make them your own.
 
 ## How it works
 

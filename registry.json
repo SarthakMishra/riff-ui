@@ -17,11 +17,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/button.tsx",
+          "path": "components/button.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/button.css",
+          "path": "components/button.css",
           "type": "registry:ui"
         },
         {
@@ -45,11 +45,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/copy-field.tsx",
+          "path": "components/copy-field.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/copy-field.css",
+          "path": "components/copy-field.css",
           "type": "registry:ui"
         },
         {
@@ -73,11 +73,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/text-field.tsx",
+          "path": "components/text-field.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/text-field.css",
+          "path": "components/text-field.css",
           "type": "registry:ui"
         },
         {
@@ -101,11 +101,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/password-reveal.tsx",
+          "path": "components/password-reveal.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/password-reveal.css",
+          "path": "components/password-reveal.css",
           "type": "registry:ui"
         },
         {
@@ -129,11 +129,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/allocation-slider.tsx",
+          "path": "components/allocation-slider.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/allocation-slider.css",
+          "path": "components/allocation-slider.css",
           "type": "registry:ui"
         },
         {
@@ -157,11 +157,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/quota-meter.tsx",
+          "path": "components/quota-meter.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/quota-meter.css",
+          "path": "components/quota-meter.css",
           "type": "registry:ui"
         },
         {
@@ -185,11 +185,11 @@
       ],
       "files": [
         {
-          "path": "components/ui/receipt-details.tsx",
+          "path": "components/receipt-details.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "components/ui/receipt-details.css",
+          "path": "components/receipt-details.css",
           "type": "registry:ui"
         },
         {
@@ -201,7 +201,7 @@
     },
     {
       "name": "sign-in-form",
-      "type": "registry:block",
+      "type": "registry:ui",
       "title": "Sign-in form",
       "description": "A sign-in card with email and password, links to reset or sign up, and a submit button that waits for the action.",
       "categories": [
@@ -214,14 +214,12 @@
       ],
       "files": [
         {
-          "path": "blocks/sign-in-form.tsx",
-          "type": "registry:component",
-          "target": "@components/sign-in-form.tsx"
+          "path": "components/sign-in-form.tsx",
+          "type": "registry:ui"
         },
         {
-          "path": "blocks/sign-in-form.css",
-          "type": "registry:component",
-          "target": "@components/sign-in-form.css"
+          "path": "components/sign-in-form.css",
+          "type": "registry:ui"
         },
         {
           "path": "LICENSE",
@@ -232,7 +230,7 @@
     },
     {
       "name": "plan-usage",
-      "type": "registry:block",
+      "type": "registry:ui",
       "title": "Plan usage",
       "description": "A plan's allowances as segmented meters under its name and renewal date, with an upgrade action that waits for checkout to open.",
       "categories": [
@@ -244,14 +242,12 @@
       ],
       "files": [
         {
-          "path": "blocks/plan-usage.tsx",
-          "type": "registry:component",
-          "target": "@components/plan-usage.tsx"
+          "path": "components/plan-usage.tsx",
+          "type": "registry:ui"
         },
         {
-          "path": "blocks/plan-usage.css",
-          "type": "registry:component",
-          "target": "@components/plan-usage.css"
+          "path": "components/plan-usage.css",
+          "type": "registry:ui"
         },
         {
           "path": "LICENSE",
@@ -262,7 +258,7 @@
     },
     {
       "name": "order-summary",
-      "type": "registry:block",
+      "type": "registry:ui",
       "title": "Order summary",
       "description": "A checkout's last step: the total with its receipt one press away, a promo code field, and a pay button that can't charge twice.",
       "categories": [
@@ -275,14 +271,12 @@
       ],
       "files": [
         {
-          "path": "blocks/order-summary.tsx",
-          "type": "registry:component",
-          "target": "@components/order-summary.tsx"
+          "path": "components/order-summary.tsx",
+          "type": "registry:ui"
         },
         {
-          "path": "blocks/order-summary.css",
-          "type": "registry:component",
-          "target": "@components/order-summary.css"
+          "path": "components/order-summary.css",
+          "type": "registry:ui"
         },
         {
           "path": "LICENSE",
@@ -293,7 +287,7 @@
     },
     {
       "name": "invite-team",
-      "type": "registry:block",
+      "type": "registry:ui",
       "title": "Invite teammates",
       "description": "Invite teammates by email or with a link to copy, with the seats left on the plan in view so nobody invites past its limit.",
       "categories": [
@@ -307,14 +301,12 @@
       ],
       "files": [
         {
-          "path": "blocks/invite-team.tsx",
-          "type": "registry:component",
-          "target": "@components/invite-team.tsx"
+          "path": "components/invite-team.tsx",
+          "type": "registry:ui"
         },
         {
-          "path": "blocks/invite-team.css",
-          "type": "registry:component",
-          "target": "@components/invite-team.css"
+          "path": "components/invite-team.css",
+          "type": "registry:ui"
         },
         {
           "path": "LICENSE",
@@ -327,7 +319,7 @@
       "name": "riff-skill",
       "type": "registry:item",
       "title": "Riff agent skill",
-      "description": "Teaches coding agents to install, compose and theme Riff components and blocks, and to check them before calling a screen done.",
+      "description": "Teaches coding agents to install, compose and theme Riff components, and to check them before calling a screen done.",
       "files": [
         {
           "path": "skills/riff/SKILL.md",

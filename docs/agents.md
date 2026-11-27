@@ -51,7 +51,7 @@ Follow .agents/skills/riff/SKILL.md when building or changing UI.
 
 ## Keep it current
 
-The skill names every component and block in the registry. When new ones land, run the `add` command again with `--overwrite` to refresh it. Any edits you made to your copy are replaced, so keep project-specific rules in a separate file.
+The skill names every component in the registry. When new ones land, run the `add` command again with `--overwrite` to refresh it. Any edits you made to your copy are replaced, so keep project-specific rules in a separate file.
 
 ## Read it first
 
@@ -60,7 +60,7 @@ The full skill is short. Read it before you install it, the same as any instruct
 ```md
 ---
 name: riff
-description: Install, compose and theme Riff components (button, copy field, text field, password reveal, allocation slider, quota meter, receipt details) and blocks (sign-in form, plan usage, order summary, invite teammates) from the @riff shadcn registry. Use when a screen needs one of these controls or blocks, when adding or restyling one, or when reviewing UI built with them.
+description: Install, compose and theme Riff components (button, copy field, text field, password reveal, allocation slider, quota meter, receipt details, sign-in form, plan usage, order summary, invite teammates) from the @riff shadcn registry. Use when a screen needs one of these controls, when adding or restyling one, or when reviewing UI built with them.
 ---
 ```
 

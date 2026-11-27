@@ -1,6 +1,6 @@
 # MCP server
 
-Let your coding agent browse, search and install Riff components and blocks through the shadcn MCP server, with the @riff registry set in components.json.
+Let your coding agent browse, search and install standalone Riff components through the shadcn MCP server, with the @riff registry set in components.json.
 
 [Live preview and interactive docs](https://sarthakmishra.com/riff-ui/agents/mcp)
 

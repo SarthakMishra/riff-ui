@@ -2,7 +2,7 @@
 
 A plan's allowances as segmented meters under its name and renewal date, with an upgrade action that waits for checkout to open.
 
-[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/blocks/plan-usage)
+[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/components/plan-usage)
 
 ```tsx
 <PlanUsage
@@ -26,7 +26,7 @@ Install with the shadcn CLI, or copy the files yourself.
 npx shadcn@latest add @riff/plan-usage
 ```
 
-The CLI installs the components the block uses into your UI folder first, then writes `plan-usage.tsx` and `plan-usage.css` into `components/`.
+The CLI installs the components it uses into your UI folder first, then writes `plan-usage.tsx` and `plan-usage.css` beside them.
 
 ### Manual
 
@@ -36,11 +36,11 @@ The CLI installs the components the block uses into your UI folder first, then w
 npx shadcn@latest add @riff/quota-meter @riff/button
 ```
 
-Or copy each one by hand from its page: [Quota meter](../components/quota-meter.md), [Button](../components/button.md).
+Or copy each one by hand from its page: [Quota meter](./quota-meter.md), [Button](./button.md).
 
-#### 2. Copy the block
+#### 2. Copy the component
 
-Save this as `components/plan-usage.tsx`:
+Save this as `components/ui/plan-usage.tsx`:
 
 ```tsx
 /*
@@ -124,8 +124,8 @@ export function PlanUsage({
 Save this beside it as `plan-usage.css`:
 
 ```css
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
   .riff-plan-usage {
     border: 1px solid var(--color-border, GrayText);
@@ -165,7 +165,7 @@ Save this beside it as `plan-usage.css`:
 ## Usage
 
 ```tsx
-import { PlanUsage } from '@/components/plan-usage';
+import { PlanUsage } from '@/components/ui/plan-usage';
 
 <PlanUsage
   plan={plan.name}
@@ -175,11 +175,11 @@ import { PlanUsage } from '@/components/plan-usage';
 />;
 ```
 
-Each quota renders a [Quota meter](../components/quota-meter.md), so one near its limit turns to your warning colour. Return a Promise from `onUpgrade` and the button stays pending until it settles.
+Each quota renders a [Quota meter](./quota-meter.md), so one near its limit turns to your warning colour. Return a Promise from `onUpgrade` and the button stays pending until it settles.
 
 ## Built from
 
-[Quota meter](../components/quota-meter.md), [Button](../components/button.md). A block is a starting point: change its copy, layout and props freely once it is in your project.
+[Quota meter](./quota-meter.md), [Button](./button.md). Change its copy, layout and props freely once it is in your project.
 
 ## API reference
 

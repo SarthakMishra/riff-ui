@@ -2,7 +2,7 @@
 
 Invite teammates by email or with a link to copy, with the seats left on the plan in view so nobody invites past its limit.
 
-[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/blocks/invite-team)
+[Live preview and interactive docs](https://sarthakmishra.com/riff-ui/components/invite-team)
 
 ```tsx
 <InviteTeam
@@ -23,7 +23,7 @@ Install with the shadcn CLI, or copy the files yourself.
 npx shadcn@latest add @riff/invite-team
 ```
 
-The CLI installs the components the block uses into your UI folder first, then writes `invite-team.tsx` and `invite-team.css` into `components/`.
+The CLI installs the components it uses into your UI folder first, then writes `invite-team.tsx` and `invite-team.css` beside them.
 
 ### Manual
 
@@ -33,11 +33,11 @@ The CLI installs the components the block uses into your UI folder first, then w
 npx shadcn@latest add @riff/quota-meter @riff/text-field @riff/button @riff/copy-field
 ```
 
-Or copy each one by hand from its page: [Quota meter](../components/quota-meter.md), [Text field](../components/text-field.md), [Button](../components/button.md), [Copy field](../components/copy-field.md).
+Or copy each one by hand from its page: [Quota meter](./quota-meter.md), [Text field](./text-field.md), [Button](./button.md), [Copy field](./copy-field.md).
 
-#### 2. Copy the block
+#### 2. Copy the component
 
-Save this as `components/invite-team.tsx`:
+Save this as `components/ui/invite-team.tsx`:
 
 ```tsx
 /*
@@ -126,8 +126,8 @@ export function InviteTeam({
 Save this beside it as `invite-team.css`:
 
 ```css
-/* Host roles first, system colours after: the block reads your theme when
-   it has these properties and stays legible when it does not. */
+/* Host roles first, system colours after: the component reads your theme
+   when it has these properties and stays legible when it does not. */
 @layer components {
   .riff-invite-team {
     display: grid;
@@ -170,7 +170,7 @@ Save this beside it as `invite-team.css`:
 ## Usage
 
 ```tsx
-import { InviteTeam } from '@/components/invite-team';
+import { InviteTeam } from '@/components/ui/invite-team';
 
 <InviteTeam
   inviteLink={team.inviteLink}
@@ -184,7 +184,7 @@ import { InviteTeam } from '@/components/invite-team';
 
 ## Built from
 
-[Quota meter](../components/quota-meter.md), [Text field](../components/text-field.md), [Button](../components/button.md), [Copy field](../components/copy-field.md). A block is a starting point: change its copy, layout and props freely once it is in your project.
+[Quota meter](./quota-meter.md), [Text field](./text-field.md), [Button](./button.md), [Copy field](./copy-field.md). Change its copy, layout and props freely once it is in your project.
 
 ## API reference
 
